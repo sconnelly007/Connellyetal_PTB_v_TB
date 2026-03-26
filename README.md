@@ -4,7 +4,7 @@ This repository contains the interactive figures, final plot outputs, and analys
 
 Please view figures highlighting the QC steps and analysis in:
 
-**`SRI_Interactive_Figures.html`**
+[View Interactive Figures](./SRI_Interactive_Figures.html)
 
 This interactive HTML allows viewers to explore the figures presented in the poster.
 
