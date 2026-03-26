@@ -1,0 +1,103 @@
+---
+title: "SRI Interactive Figures"
+author: "Sean Connelly"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: false
+    code-fold: true
+    smooth-scroll: true
+    df-print: paged
+    theme: cosmo
+    self-contained: true
+execute:
+  echo: true
+  warning: false
+  message: false
+editor: source
+---
+
+## Study Description
+
+To investigate the fetal mechanisms of spontaneous PTB (sPTB), miRNA expression in fetal umbilical cord blood (CB) and placental (PL) cells, at the maternal fetal interface, were measured to investigate fetal gene regulation in sPTB. To further investigate fetal miRNA regulation of gene expression, CB mRNA was extracted and sequenced.
+
+![Study Schematic](images/graphical_abstract.png)
+
+## Quality Control Filtering
+
+Genes were kept that had at least 10 reads in greater than or equal to 4 samples. The genes that passed filtering are in blue while the genes that were filtered out are in grey for CB miRNA (A), PL miRNA (B) and CB mRNA (C).
+
+![Gene Filter](plots/final_figs/combined_genefilter_highres.png)
+
+## Principal Component Analysis (PCA), colored by condition, body mass index (BMI), fetal sex or race
+
+PCA of samples within the CB miRNA (A), PL miRNA (B) or CB mRNA (C) datasets colored by condition, race, newborn sex or body mass index (BMI). PCA results showed that sample variation was mainly due to condition (preterm vs. term), rather than other variables. But, these variables were still controlled for in the differential expression (DE) analysis due to any contributions of these differential states to the DE results.
+
+![PCA](plots/final_figs/combined_PCA_highres.png)
+
+## UpSet plot showing number of significant genes per model
+
+Utilizing DESeq2, different design formulas were utilized to control for the mother’s self-reported race, newborn sex and the mother’s BMI. The different permutations of each model were run and the differentially expressed genes were returned for each model (absolute log2FC > 0.3, adjusted p-value < 0.05). Utilizing these genes, the overlapping or unique differentially expressed genes per model were plotted per dataset for the CB miRNA (A), PL miRNA (B) or CB mRNA (C).
+
+![UpSet](plots/final_figs/combined_upset_highres.png)
+
+## CB miRNA analysis
+
+In CB samples, upregulated miRNAs mainly target immune system regulation while downregulated miRNAs target developmental programs.
+
+### miRNA Differential expression
+
+![](plots/final_figs/fig1A.png)
+
+### miRNA DE: GO Analysis
+
+#### GO Analysis on upregulated miRNAs
+
+![](plots/final_figs/fig1B.png)
+
+
+#### GO Analysis on downregulated miRNAs
+
+![](plots/final_figs/fig1C.png)
+
+## PL miRNA analysis
+
+In PL samples, upregulated miRNAs target metabolic processes while downregulated miRNAs mainly target stem cell pathways.
+
+### miRNA Differential expression
+
+![DE miRNA](plots/final_figs/fig2A.png)
+
+### miRNA DE: GO Analysis
+
+#### GO Analysis on upregulated miRNAs
+
+![](plots/final_figs/fig2B.png)
+
+
+#### GO Analysis on downregulated miRNAs
+
+![](plots/final_figs/fig2C.png)
+
+## CB mRNA analysis
+
+CB samples show an upregulation of stress response and downregulation of immune genes.
+
+![](plots/final_figs/fig3_A_poster.png)
+
+## Comparing CB miRNA expression and mRNA expression
+
+### Pearson Correlation: upregulated miRNA and downregulated mRNA 
+
+Upregulated miRNA correlated to downregulated epigenetic and signaling genes.
+
+![](plots/final_figs/fig3_B_poster.png)
+
+### Pearson Correlation: downregulated miRNA and upregulated mRNA correlation
+
+Downregulated miRNA correlated to upregulated mitochondrial and secretory protein genes.
+
+![](plots/final_figs/fig3_C_poster.png)
+
